@@ -42,7 +42,7 @@ public class Server {
                     float num1 = 0;
                     float num2 = 0;
                     float result = 0;
-                    if (!syntaxError){
+                    if (!syntaxError){ //se non vi sono errori nella scrittura del client
                         try { //se il parse riguarda un valore non numerico si genera un eccezione
                             num1 = Float.parseFloat(dati[0]);
                         } catch (Exception e) {
@@ -54,7 +54,7 @@ public class Server {
                             syntaxError = true;
                         }
                         String op = dati[2];
-                        switch (op){
+                        switch (op){ //gestione operazioni matematiche possibili
                             case "+":
                                 result = num1 + num2;
                                 break;
