@@ -38,7 +38,7 @@ public class Server {
                     boolean syntaxError = false;
                     boolean infiniteError = false; // per gestire la divisione per 0
                     String[] dati = stringaRicevuta.split(","); //gli indici dell'array dati vanno da 0 a 2 (0 = 1num, 1 = 2num, 2 = operatore)
-                    if (dati.length < 2) syntaxError = true; //se non è avvenuto uno split completo/corretto
+                    if (dati.length != 2) syntaxError = true; //se non è avvenuto uno split completo/corretto
                     float num1 = 0;
                     float num2 = 0;
                     float result = 0;
